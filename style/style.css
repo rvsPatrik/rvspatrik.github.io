@@ -1,0 +1,236 @@
+/* Body Styling */
+body {
+    background-color: beige;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding-top: 60px;
+  }
+  
+  /* Header */
+  header {
+    background: #333;
+    color: #fff;
+    padding: 0.7em 0;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 100;
+  }
+  
+/* Navbar styles */
+nav {
+  display: flex;
+  justify-content: space-between; /* Space between nav items and social icons */
+  align-items: center;
+  padding: 0 1em;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  font-size: 1em;
+  font-weight:lighter;
+  margin-right: 20px;
+}
+
+.nv {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Center navigation items */
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1; /* Allows the nav items to take up available space */
+}
+
+.nvtxt a {
+  text-decoration: none;
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1em; /* Space between icons */
+}
+
+.social-icons img {
+  display: block;
+  width: 35px;
+  height: 35px;
+}
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+  }
+
+  #front-page {
+    position: relative;
+    height: 85vh;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  .quote-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-size: 1.8em;
+    color: #333;
+    font-style: italic;
+    padding: 1em;
+    background: grey;
+    width: 125%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 2em;
+    rotate: 5deg;
+  }
+  
+  /* Sections */
+  section {
+    padding: 2em;
+    text-align: center;
+  }
+  
+  /* Education Section */
+  #education {
+    background-color: beige;
+    padding: 2em 1em;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .education-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .education-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 8px;
+    background: #ccc;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  
+  .education-item {
+    width: 40%;
+    background: beige;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .education-item.left {
+    text-align: left;
+    margin-right: 0;
+    transform: translateX(-55%);
+    z-index: 1;
+  }
+  
+  .education-item.right {
+    text-align: left;
+    margin-left: 0;
+    transform: translateX(55%);
+    z-index: 1;
+  }
+
+  .edhighl{
+    font-size: 1.3em;
+  }
+  .rolam{
+    font-size: 1.2em;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 0.5em 1em;
+    background: #333;
+    color: white;
+    font-size: 0.9em;
+  }
+
+  #about{
+    padding: 2em 1em;
+    text-align: center;
+  }
+
+  #about .about-container {
+    display: flex;
+    align-items: stretch;
+    gap: 2em;
+    text-align: center;
+  }
+
+  #about .about-text {
+    width: 60%;
+    font-size: 1.5em;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #about .about-image {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #about .about-image img {
+    max-width: 50%;
+    max-height: 100;
+    height: auto;
+    border-radius: 50%; /* Optional, if you want the image to be circular */
+    object-fit:cover;
+    flex-shrink: 0;
+  }
+
+  #about ul {
+    list-style-position: inside; /* Makes the dots inside the list container */
+    position: center;
+    padding-left: 0%; /* Removes the default padding */
+    margin-left : 0;
+  }
+  
+
+  
+  @media (max-width: 768px) {
+    #about .about-container {
+      flex-direction: column; /* Stack the text and image vertically on smaller screens */
+      align-items: center; /* Center align items */
+    }
+  
+    #about .about-text,
+    #about .about-image {
+      width: 100%; /* Make both elements take the full width */
+    }
+  
+    #about .about-image img {
+      max-width: 75%; /* Reduce the size on smaller screens */
+      height: auto;
+    }
+  }
