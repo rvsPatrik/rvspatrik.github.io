@@ -204,7 +204,7 @@ nav {
     max-width: 50%;
     max-height: 100;
     height: auto;
-    border-radius: 50%; /* Optional, if you want the image to be circular */
+    border-radius: 50%;
     object-fit:cover;
     flex-shrink: 0;
   }
